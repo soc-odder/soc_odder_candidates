@@ -32,16 +32,16 @@ function soc_odder_candidates_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '3',
+          'weight' => '8',
         ),
         'title' => array(
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '1',
+          'weight' => '10',
         ),
       ),
       'display' => array(),

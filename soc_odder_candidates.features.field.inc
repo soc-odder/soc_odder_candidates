@@ -95,7 +95,7 @@ function soc_odder_candidates_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '6',
+        'weight' => '3',
       ),
     ),
   );
@@ -185,7 +185,7 @@ function soc_odder_candidates_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '5',
+        'weight' => '2',
       ),
     ),
   );
@@ -241,7 +241,7 @@ function soc_odder_candidates_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '4',
+        'weight' => '1',
       ),
     ),
   );
@@ -331,7 +331,7 @@ function soc_odder_candidates_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '7',
+        'weight' => '4',
       ),
     ),
   );
@@ -430,7 +430,7 @@ function soc_odder_candidates_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '8',
+        'weight' => '5',
       ),
     ),
   );
@@ -520,7 +520,7 @@ function soc_odder_candidates_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '11',
+        'weight' => '7',
       ),
     ),
   );
@@ -602,7 +602,7 @@ function soc_odder_candidates_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'entityreference_autocomplete',
-        'weight' => '10',
+        'weight' => '6',
       ),
     ),
   );

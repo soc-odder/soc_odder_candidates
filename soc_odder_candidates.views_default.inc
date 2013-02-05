@@ -79,8 +79,8 @@ function soc_odder_candidates_views_default_views() {
     'kandidat' => 'kandidat',
   );
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: Blok */
+  $handler = $view->new_display('block', 'Blok', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Kandidater';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -99,9 +99,8 @@ function soc_odder_candidates_views_default_views() {
     t('‹ forrige'),
     t('næste ›'),
     t('sidste »'),
-    t('Content pane'),
+    t('Blok'),
     t('Kandidater'),
-    t('View panes'),
   );
   $export['soc_odder_candidates'] = $view;
 

@@ -45,10 +45,9 @@ function soc_odder_candidates_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
+          'type' => 'hidden',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -66,9 +65,10 @@ function soc_odder_candidates_field_default_fields() {
         'better_formats' => array(
           'allowed_formats' => array(
             'filtered_html' => 'filtered_html',
-            'plain_text' => 'plain_text',
+            'plain_text' => 0,
+            'wysiwyg' => 0,
           ),
-          'allowed_formats_toggle' => 0,
+          'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
@@ -78,6 +78,9 @@ function soc_odder_candidates_field_default_fields() {
               'plain_text' => array(
                 'weight' => '10',
               ),
+              'wysiwyg' => array(
+                'weight' => '0',
+              ),
             ),
           ),
         ),
@@ -85,14 +88,14 @@ function soc_odder_candidates_field_default_fields() {
           'enable' => 0,
           'insert_plugin' => '',
         ),
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '5',
+          'rows' => '8',
         ),
         'type' => 'text_textarea',
         'weight' => '3',
@@ -134,10 +137,9 @@ function soc_odder_candidates_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'text',
+          'label' => 'hidden',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '2',
         ),
         'teaser' => array(
@@ -156,9 +158,10 @@ function soc_odder_candidates_field_default_fields() {
         'better_formats' => array(
           'allowed_formats' => array(
             'filtered_html' => 'filtered_html',
-            'plain_text' => 'plain_text',
+            'plain_text' => 0,
+            'wysiwyg' => 0,
           ),
-          'allowed_formats_toggle' => 0,
+          'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
@@ -168,6 +171,9 @@ function soc_odder_candidates_field_default_fields() {
               'plain_text' => array(
                 'weight' => '10',
               ),
+              'wysiwyg' => array(
+                'weight' => '0',
+              ),
             ),
           ),
         ),
@@ -175,7 +181,7 @@ function soc_odder_candidates_field_default_fields() {
           'enable' => 0,
           'insert_plugin' => '',
         ),
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -214,10 +220,9 @@ function soc_odder_candidates_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'email',
           'settings' => array(),
-          'type' => 'email_default',
-          'weight' => '4',
+          'type' => 'hidden',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -284,7 +289,7 @@ function soc_odder_candidates_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -301,10 +306,11 @@ function soc_odder_candidates_field_default_fields() {
       'settings' => array(
         'better_formats' => array(
           'allowed_formats' => array(
-            'filtered_html' => 'filtered_html',
-            'plain_text' => 'plain_text',
+            'filtered_html' => 0,
+            'plain_text' => 0,
+            'wysiwyg' => 'wysiwyg',
           ),
-          'allowed_formats_toggle' => 0,
+          'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
@@ -314,6 +320,9 @@ function soc_odder_candidates_field_default_fields() {
               'plain_text' => array(
                 'weight' => '10',
               ),
+              'wysiwyg' => array(
+                'weight' => '0',
+              ),
             ),
           ),
         ),
@@ -321,7 +330,7 @@ function soc_odder_candidates_field_default_fields() {
           'enable' => 0,
           'insert_plugin' => '',
         ),
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -373,13 +382,9 @@ function soc_odder_candidates_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'medium',
-          ),
-          'type' => 'image',
-          'weight' => '1',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -473,11 +478,8 @@ function soc_odder_candidates_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'socialmedia_link_formatter',
-          'settings' => array(
-            'pic_size' => 'small',
-          ),
-          'type' => 'socialmedia_link_formatter',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '5',
         ),
         'teaser' => array(
@@ -643,7 +645,7 @@ function soc_odder_candidates_field_default_fields() {
       'description' => 'A field replacing node title.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '7',

@@ -29,19 +29,22 @@ function soc_odder_candidates_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'teamlist';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['row_options']['separator'] = '<br/>';
   /* Field: Content: Billede */
   $handler->display->display_options['fields']['field_profile_image']['id'] = 'field_profile_image';
   $handler->display->display_options['fields']['field_profile_image']['table'] = 'field_data_field_profile_image';
   $handler->display->display_options['fields']['field_profile_image']['field'] = 'field_profile_image';
   $handler->display->display_options['fields']['field_profile_image']['label'] = '';
   $handler->display->display_options['fields']['field_profile_image']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_profile_image']['element_class'] = 'team_all';
   $handler->display->display_options['fields']['field_profile_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_profile_image']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_profile_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_profile_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => 'smallkandidatpicture',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
@@ -51,6 +54,15 @@ function soc_odder_candidates_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_class'] = 'team_name';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Sort criterion: Content: Placering (field_placering) */
+  $handler->display->display_options['sorts']['field_placering_value']['id'] = 'field_placering_value';
+  $handler->display->display_options['sorts']['field_placering_value']['table'] = 'field_data_field_placering';
+  $handler->display->display_options['sorts']['field_placering_value']['field'] = 'field_placering_value';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -69,7 +81,7 @@ function soc_odder_candidates_views_default_views() {
   /* Display: Blok */
   $handler = $view->new_display('block', 'Blok', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Mød borgmesteren og kandidaterne';
+  $handler->display->display_options['title'] = 'Et stærkt hold til Odder byråd';
   $translatables['soc_odder_candidates'] = array(
     t('Master'),
     t('more'),
@@ -86,7 +98,7 @@ function soc_odder_candidates_views_default_views() {
     t('next ›'),
     t('last »'),
     t('Blok'),
-    t('Mød borgmesteren og kandidaterne'),
+    t('Et stærkt hold til Odder byråd'),
   );
   $export['soc_odder_candidates'] = $view;
 

@@ -47,7 +47,7 @@ function soc_odder_candidates_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -68,7 +68,7 @@ function soc_odder_candidates_field_default_fields() {
             'plain_text' => 0,
             'wysiwyg' => 0,
           ),
-          'allowed_formats_toggle' => 1,
+          'allowed_formats_toggle' => 0,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
@@ -140,7 +140,7 @@ function soc_odder_candidates_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -222,7 +222,7 @@ function soc_odder_candidates_field_default_fields() {
           'label' => 'inline',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '1',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -286,10 +286,9 @@ function soc_odder_candidates_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '4',
+          'type' => 'hidden',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -306,15 +305,19 @@ function soc_odder_candidates_field_default_fields() {
       'settings' => array(
         'better_formats' => array(
           'allowed_formats' => array(
-            'filtered_html' => 0,
-            'plain_text' => 0,
+            'filtered_html' => 'filtered_html',
+            'no_filters_html' => 'no_filters_html',
+            'plain_text' => 'plain_text',
             'wysiwyg' => 'wysiwyg',
           ),
-          'allowed_formats_toggle' => 1,
+          'allowed_formats_toggle' => 0,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
               'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'no_filters_html' => array(
                 'weight' => '0',
               ),
               'plain_text' => array(
@@ -384,7 +387,7 @@ function soc_odder_candidates_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -483,7 +486,7 @@ function soc_odder_candidates_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -576,10 +579,9 @@ function soc_odder_candidates_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '3',
+          'type' => 'hidden',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -674,7 +676,7 @@ function soc_odder_candidates_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '0',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -716,6 +718,7 @@ function soc_odder_candidates_field_default_fields() {
             'document' => 0,
             'image' => 'image',
             'video' => 0,
+            0 => 0,
           ),
           'browser_plugins' => array(
             'media_default--media_browser_1' => 0,
@@ -770,7 +773,7 @@ function soc_odder_candidates_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -868,7 +871,7 @@ function soc_odder_candidates_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -932,13 +935,13 @@ function soc_odder_candidates_field_default_fields() {
       'bundle' => 'kandidat',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'A field replacing node title.',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -948,31 +951,58 @@ function soc_odder_candidates_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
+      'fences_wrapper' => 'div',
       'field_name' => 'title_field',
       'label' => 'Titel',
-      'required' => TRUE,
+      'required' => 1,
       'settings' => array(
-        'hide_label' => array(
-          'entity' => FALSE,
-          'page' => FALSE,
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'filtered_html' => 'filtered_html',
+            'plain_text' => 'plain_text',
+            'wysiwyg' => 'wysiwyg',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
         ),
-        'text_processing' => 0,
+        'hide_label' => array(
+          'entity' => 0,
+          'page' => 0,
+        ),
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'size' => 60,
+          'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '0',
+        'weight' => 0,
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A field replacing node title.');
   t('Billede');
   t('Bruger');
   t('Denne værdi angiver kandidatens placering på stemmesedlen = resultatet af urafstemningen');

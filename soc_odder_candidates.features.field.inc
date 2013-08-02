@@ -65,15 +65,19 @@ function soc_odder_candidates_field_default_fields() {
         'better_formats' => array(
           'allowed_formats' => array(
             'filtered_html' => 'filtered_html',
+            'no_filters_html' => 'no_filters_html',
             'plain_text' => 0,
             'wysiwyg' => 0,
           ),
-          'allowed_formats_toggle' => 0,
+          'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
               'filtered_html' => array(
                 'weight' => '0',
+              ),
+              'no_filters_html' => array(
+                'weight' => '-10',
               ),
               'plain_text' => array(
                 'weight' => '10',
@@ -95,7 +99,7 @@ function soc_odder_candidates_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '8',
+          'rows' => '2',
         ),
         'type' => 'text_textarea',
         'weight' => '4',
@@ -158,8 +162,9 @@ function soc_odder_candidates_field_default_fields() {
         'better_formats' => array(
           'allowed_formats' => array(
             'filtered_html' => 'filtered_html',
-            'plain_text' => 0,
-            'wysiwyg' => 0,
+            'no_filters_html' => 'no_filters_html',
+            'plain_text' => 'plain_text',
+            'wysiwyg' => 'wysiwyg',
           ),
           'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
@@ -167,6 +172,9 @@ function soc_odder_candidates_field_default_fields() {
             'formats' => array(
               'filtered_html' => array(
                 'weight' => '0',
+              ),
+              'no_filters_html' => array(
+                'weight' => '-10',
               ),
               'plain_text' => array(
                 'weight' => '10',
@@ -188,7 +196,7 @@ function soc_odder_candidates_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '5',
+          'rows' => '2',
         ),
         'type' => 'text_textarea',
         'weight' => '2',
@@ -307,10 +315,10 @@ function soc_odder_candidates_field_default_fields() {
           'allowed_formats' => array(
             'filtered_html' => 'filtered_html',
             'no_filters_html' => 'no_filters_html',
-            'plain_text' => 'plain_text',
-            'wysiwyg' => 'wysiwyg',
+            'plain_text' => 0,
+            'wysiwyg' => 0,
           ),
-          'allowed_formats_toggle' => 0,
+          'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
@@ -996,7 +1004,7 @@ function soc_odder_candidates_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => 0,
+        'weight' => '0',
       ),
     ),
   );
